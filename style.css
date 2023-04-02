@@ -1,0 +1,11 @@
+#navbar {
+  
+  
+  position: sticky;
+  top:10px;
+  background: aliceblue;
+}
+
+img {
+    content: url("back9.jpg");
+}
