@@ -603,4 +603,4 @@ var foods = ["Pizza", "Burger", "Snacks"];
 //const newCityArr = cities.slice(2,4); //(2,3);
 
 
-//console.log(newCityArr)
+//console.log(newCityArr);
