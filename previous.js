@@ -604,3 +604,74 @@ var foods = ["Pizza", "Burger", "Snacks"];
 
 
 //console.log(newCityArr);
+
+
+//Topics:
+
+// splice and nested array
+//Loop
+// for , while , do while
+// examples
+// print counting , table , find city , even or odd
+
+//var i = 1; // metthod 2 for intialization
+/*for(var i = 1 ; i <= 3; i++){
+  console.log(i + ' mugs');
+
+}
+
+console.log('drum is full')
+
+*/
+
+// while loop
+
+// initialization is not the part of while loop
+
+/*var i =1;
+while(i<= 3){
+  console.log(i + ' mugs');
+  i++;
+}
+*/
+
+// do while
+
+// // initialization is also not the part of while loop
+
+/*var i = 1;
+do{
+  console.log(i + ' mugs');
+  i++;
+}
+while(i<= 3) */
+
+// examples
+
+// check city
+
+/*var cities = ['karachi','peshawar','quetta', 'lahore'];
+
+var cleanOne  = prompt('enter city');
+
+//2
+
+// A flag is a logical concept, in js.
+
+var found=false;
+for(var i =0; i<cities.length; i++){
+  if(cleanOne === cities[i]){
+    alert('found');
+    found = true
+    break; //1
+  }
+  
+  //else{
+    //alert('no match found')
+  //}
+}
+
+if(!found){
+  alert('no match found')
+}
+*/
