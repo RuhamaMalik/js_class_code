@@ -2,7 +2,7 @@
 
 /*
 An alert is a box that pops up to give the user a message.
-ser a message.Here 's code for an alert that
+set a message. Here's the code for an alert that
 displays the message "Thanks for your input!"
 
 alert('Thanks for your input!');
@@ -44,7 +44,7 @@ and manipulated in a computer program
 
 //Declaration and Initialization 
 
-//1. You can declare and initialize in single line or you can do that in two line
+//1. You can declare and initialize in a single line or you can do that in two line
 
 //var age = 25; //OR
 //var age; //-- Declaration
@@ -52,7 +52,7 @@ and manipulated in a computer program
 
 //Only declaration will leave variable undefined
 
-// make var name meaningful
+//Make var name meaningful
 
 //var x = 10
 //var age = 10 //age is better than x
@@ -109,7 +109,7 @@ Statements are the building blocks of JavaScript code, and they work together to
 //end statements with semicolon
 
 /*
-1. Semicolons separate JavaScript statement.
+1. Semicolons separate JavaScript statements.
 var a = 4;
 2. When separated by semicolons, multiple statements on one line are allowed
 
@@ -120,8 +120,8 @@ alert(i);console.log(k);
 //End of Statement without semicolon ;
 
 /*
-1. Typically we end statements with semicolon but JavaScript
-semicolon is optional, but is highly recommended to end with semicolon.
+1. Typically we end statements with a semicolon in JavaScript
+semicolon is optional, but is highly recommended to end with a semicolon.
 2. The end of a statement is most often marked by pressing enter and starting a new line.
 */
 
@@ -220,7 +220,7 @@ of prefix and postfix to any other variable
 increase/decrease value in actual variable
  */
 
-////////////// pre increment 
+////////////// pre-increment 
 var preInc = 1;
 var newNum = ++preInc;
 
@@ -233,8 +233,8 @@ console.log(newNum); //2
 var postInc = 1;
 var newNum2 = postInc++;
 
-console.log("postInc  " + postInc); //3
-console.log(newNum2); //2
+console.log("postInc  " + postInc); //2
+console.log(newNum2); //1
 
 
 ////////////// pre decrement
@@ -257,7 +257,7 @@ console.log(num); //0
 //Example 1
 var a = 4;
 var b = 2;
-var c = a++ - b; // first value of a placed here which is 4 then increase 1 in a so will become 5
+var c = a++ - b; //First the value of a will be assigned here which is 4 then increase to 1 so  a will become 5
 console.log(a); // 5
 console.log(b); // 2
 console.log(c);
@@ -265,7 +265,7 @@ console.log(c);
 //Example 2
 var a = 4;
 var b = 2;
-var c = ++a + b; // first value of a increased so will become 5 then value of a will be placed here, 5
+var c = ++a + b; // First the value of a will be increased so a will be 5 then the value of a will be kept here, 5
 console.log(a); // 5
 console.log(b); // 2
 console.log(c); // 7
@@ -281,11 +281,11 @@ console.log(c); //2
 //Example 4
 
 /*Assignment Operators
-1. Assignment operator assign value to variables
-2. When you need to apply arithmetic operation and assign
-value to same variable then you can also use them
+1. The assignment operator assigns values to variables
+2. When you need to apply arithmetic operations and assign
+value to the same variable then you can also use them
 
-jab hame kisi var ki value k saAth koi arithmetic operation perform kaRna ho or ooskab jo result ho oOse ooshi var mAi store karna ho tab ham inhy use karte hen.
+jab hame kisi var ki value k saAth koi arithmetic operation perform kaRna ho or ooska jo result ho oOse ooshi var mAi store karna ho tab ham inhy use karte hen.
 
 
 */
@@ -339,7 +339,7 @@ console.log('my name is ' + fullName);
 console.log('my name is         ' + fullName); // js noly count space in text string
 
 
-//Adding two numbers, will return the sum, but adding a number and a string will return a string:
+//Adding two numbers will return the sum, but adding a number and a string will return a string:
 
 var a = "6" + 2; // "62"
 var b = 3 + "6"; // "36"
@@ -359,7 +359,10 @@ In JavaScript, prompt() is a function that displays a dialog box containing a me
 var question = "What is your age?";
 var age = prompt(question);
 console.log(age)
+// syntax : prompt(question, default answer);
 
+
+//////////////////////////////////////////
 var a = 4;
 var b = 3;
 var c = ++a + b++ - a + --b;
@@ -399,7 +402,7 @@ var city = prompt('what is the capital of Pakistan?');
 var correctAns = 'islamabad';
 var score = 0;
 if(city === correctAns){
-  document.write('Ccorrect!');
+  document.write('Correct!');
 }
 
 // If the condition tested false, nothing happened
@@ -411,6 +414,7 @@ else{
 
 var city = prompt('what is the capital of Pakistan?');
 var correctAns = 'islamabad';
+var score = 0;
 if (city === correctAns) {
   document.write('Correct!');
   score++;
@@ -418,7 +422,7 @@ if (city === correctAns) {
 }
 else {
   document.write('wrong answer');
-  document.write('your scrore : ' + score);
+  document.write('your scrore : ' + score); 
 }
 
 
@@ -515,7 +519,8 @@ null && true || true && true
 
 var input = "M";
 if (input == "A" || input == "E" || input == "I" ||
-  input == "O" || input == "U") {
+  input == "O" || input == "U" || input == "a" || input == "e" || input == "i" ||
+  input == "o" || input == "u") {
   console.log("It's a Vowel");
 }
 else {
@@ -566,7 +571,7 @@ if(perc >= 0 && perc <= 100){
  
 
  
-In JavaScript, the if-else statement and logical operators are used for decision making 
+In JavaScript, the if-else statement and logical operators are used for decision-making 
 
 */
 
@@ -586,6 +591,27 @@ var foods = ["Pizza", "Burger", "Snacks"];
 //console.log(foods[foods.length-1]);
 
 //The slice() method can be used to create a copy of an array or return a portion of an array. It is important to note that the slice() method does not alter the original array but instead creates a shallow copy.
+
+/// Shallow and Deep Copy
+// // var foods = ["Pizza", "Burger", "Snacks"];
+// //var foods2 = foods;
+// //console.log( "foods ---- " + foods);
+// //console.log("foods2 ---- " + foods2);
+
+// Shallow copy: means that only the first level of the object is copied.
+
+// var foods = ["Pizza", "Burger", "Snacks"]; //A shallow copy means that certain (sub-)values are still connected to the original variable
+// var foods2 = foods; // direct refrence
+// foods[1] = "Coldrink";
+// console.log( "foods ---- " + foods);  // change
+// console.log("foods2 ---- " + foods2); // change
+
+// Deep copy: means that all levels of the object are copied. This is a true copy of the object.
+// var foods = ["Pizza", "Burger", "Snacks"];// A deep copy means that all of the values of the new variable are copied . and disconnected from the original variable
+// var foods2 = foods.slice(); // copy the values
+// foods[1] = "Coldrink";
+// console.log( "foods ---- " + foods); // change
+// console.log("foods2 ---- " + foods2); // not change
 
 // syntax
 
