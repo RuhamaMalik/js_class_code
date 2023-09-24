@@ -37,7 +37,7 @@ and manipulated in a computer program
 
 // var can store any data type 
 
-//var nationality = "Pakistani";
+//var nationality = "Paki's'tani";
 //var age = 25;
 //var isFeePaid = true;
 //var weight = 60.55;
@@ -114,8 +114,9 @@ var a = 4;
 2. When separated by semicolons, multiple statements on one line are allowed
 
 */
+
 var i = 3; j = 5; k = i + j;
-alert(i);console.log(k);
+alert(i) ;console.log(k);
 
 //End of Statement without semicolon ;
 
