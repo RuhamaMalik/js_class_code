@@ -67,7 +67,7 @@ and manipulated in a computer program
 
 //// var for numbers
 
-var number  = 10;
+var number = 10;
 //number + 5;
 var newNumber = number + 5;
 
@@ -81,13 +81,13 @@ var total = num1 + num2;
 ////   
 
 var quantity = '15';
-var newQty = quantity+ 3; // not add will cover in subsequent chapter
+var newQty = quantity + 3; // not add will cover in subsequent chapter
 
 
 
 
 
-console.log(marks, 25 , 'multiple');//can show multiple values with comma separated 
+console.log(marks, 25, 'multiple');//can show multiple values with comma separated 
 
 
 /*
@@ -116,7 +116,7 @@ var a = 4;
 */
 
 var i = 3; j = 5; k = i + j;
-alert(i) ;console.log(k);
+alert(i); console.log(k);
 
 //End of Statement without semicolon ;
 
@@ -162,11 +162,11 @@ familiar operators
 
 */
 
-var exp1 = 2+2;
-var exp2 = 5-3;
-var exp3 = 10*3;
-var exp4 = 9/3;
-var exp5 = 5**3 //exponent
+var exp1 = 2 + 2;
+var exp2 = 5 - 3;
+var exp3 = 10 * 3;
+var exp4 = 9 / 3;
+var exp5 = 5 ** 3 //exponent
 
 console.log(exp1);
 console.log(exp2);
@@ -314,7 +314,7 @@ DM Division and Multiplication(left - to - right)
 AS Addition and Subtraction(left - to - right)
 */
 var i = 5 + 2 * 3 - 2 / 2; //10
-console.log("i is" +i);
+console.log("i is" + i);
 
 
 var a = 5 + 2 * (3 - 2) / 2; // result 6
@@ -322,20 +322,20 @@ var a = 5 + 2 * (3 - 2) / 2; // result 6
 
 //////// Concatenating text strings
 
-var sum = 2+2;  //4 addition 
+var sum = 2 + 2;  //4 addition 
 
 //1. The + operator can also be used for concatenating strings E.g:
 
 var firstName = "Anousha";
 var lastName = "Asadullah";
 
-var fullName = firstName +  lastName;
+var fullName = firstName + lastName;
 
- // create space b/w strings
- 
- fullName = firstName + " " + lastName;
- console.log(fullName);
- 
+// create space b/w strings
+
+fullName = firstName + " " + lastName;
+console.log(fullName);
+
 console.log('my name is ' + fullName);
 console.log('my name is         ' + fullName); // js noly count space in text string
 
@@ -346,9 +346,9 @@ var a = "6" + 2; // "62"
 var b = 3 + "6"; // "36"
 var c = "Hello " + 2; // "Hello 2"
 var d = 2 + "Hello "; // "2 Hello"
-var e = "Hello "+ 3 + 4; // "Hello 34"
+var e = "Hello " + 3 + 4; // "Hello 34"
 var f = 3 + 4 + "Hello "; // "7Hello"
-var g = "Hello "+ (3 + 4); // "Hello 7"
+var g = "Hello " + (3 + 4); // "Hello 7"
 
 
 
@@ -402,12 +402,12 @@ console.log(5 !== '5'); // true
 var city = prompt('what is the capital of Pakistan?');
 var correctAns = 'islamabad';
 var score = 0;
-if(city === correctAns){
+if (city === correctAns) {
   document.write('Correct!');
 }
 
 // If the condition tested false, nothing happened
-else{
+else {
   document.write('wrong answer');
 }
 
@@ -423,7 +423,7 @@ if (city === correctAns) {
 }
 else {
   document.write('wrong answer');
-  document.write('your scrore : ' + score); 
+  document.write('your scrore : ' + score);
 }
 
 
@@ -431,22 +431,22 @@ else {
 
 var num = +prompt('promotEnter number!');
 
-if(num % 2 === 0){
+if (num % 2 === 0) {
   document.write('number is even');
-}else{
-    document.write('number is odd ');
+} else {
+  document.write('number is odd ');
 
 }
 
- // else if
+// else if
 
 var numb = 3;
-if(numb < 5){
+if (numb < 5) {
   document.write('less than 5');
-}else if(numb > 5){
-    document.write('greater than 5');
-}else{
-    document.write('</br> equal to 5');
+} else if (numb > 5) {
+  document.write('greater than 5');
+} else {
+  document.write('</br> equal to 5');
 }
 
 
@@ -454,7 +454,7 @@ if(numb < 5){
 
 /*
 Logical operators are used to combine multiple conditions and evaluate them as a single true or false value.
-*/ 
+*/
 let x = 10;
 if (x > 5 && x < 15) {
   console.log("x is between 5 and 15");
@@ -467,17 +467,18 @@ if (x > 5 && x < 15) {
 
 var numberr = +prompt('number?');
 
-if(numberr % 2 === 0 && numberr % 4 === 0){
+if (numberr % 2 === 0 && numberr % 4 === 0) {
   document.write('Both 2 and 4');
-}else if (numberr % 2 ===  0){
+} else if (numberr % 2 === 0) {
   document.write('only 2');
-}else if (numberr % 4 === 0) {
+} else if (numberr % 4 === 0) {
   document.write('only 4');
 }
 
-console.log(true  && true); // true
-console.log(true  && false); //false
-console.log(false  && false);// false
+
+console.log(true && true); // true
+console.log(true && false); //false
+console.log(false && false);// false
 
 // 0  '' undefined null consider false value
 
@@ -487,12 +488,12 @@ b.“AnyText” // String with any text
 c.1 // Any number other than zero
 */
 
-if(0){console.log(true);} // false
-if(1){console.log(true);} // true
-if(''){console.log(true);} // false
-if('chalega'){console.log(true);} // true
-if(undefined){console.log(true);} // false
-if(null){console.log(true);} // false
+if (0) { console.log(true); } // false
+if (1) { console.log(true); } // true
+if ('') { console.log(true); } // false
+if ('chalega') { console.log(true); } // true
+if (undefined) { console.log(true); } // false
+if (null) { console.log(true); } // false
 
 console.log(undefined && false);// undef
 // && || operator mai final answer jo values hamne oose di hen oosh8 k behalf mai banta hai agar hamne oosko value true or false mai di hy tw ooska final ans true ya false hi hoga agar isko value hamne kuch or di hen tw final ans wahi hOga. wo sirf ooska behaviour check karega k konsa  wala true hai konsa wala false hai aAgy padhna ya nahi padhna.
@@ -503,9 +504,9 @@ console.log(undefined && undefined);// pehla wala
 
 //// || operator 
 
-console.log('undefined' || 'true' );// undef
-console.log(null || 'true' );// true
-console.log(null || undefined );// undef
+console.log('undefined' || 'true');// undef
+console.log(null || 'true');// true
+console.log(null || undefined);// undef
 
 // ab aap sake liye aik sawaAl 
 //exercise
@@ -517,6 +518,15 @@ null && true || true && true
 (null && true) || (true && 1)
 
 */
+
+
+
+
+
+
+
+
+
 
 var input = "M";
 if (input == "A" || input == "E" || input == "I" ||
@@ -591,28 +601,50 @@ var foods = ["Pizza", "Burger", "Snacks"];
 
 //console.log(foods[foods.length-1]);
 
+// access nested array
+// var arr =[['a', 'b', 'c'],[1,2,3], ['x', 'y', 'z']]
+
 //The slice() method can be used to create a copy of an array or return a portion of an array. It is important to note that the slice() method does not alter the original array but instead creates a shallow copy.
 
 /// Shallow and Deep Copy
-// // var foods = ["Pizza", "Burger", "Snacks"];
+// // var foods = ["Pizza", "Burger", "Snacks", ["nested"]];
 // //var foods2 = foods;
 // //console.log( "foods ---- " + foods);
 // //console.log("foods2 ---- " + foods2);
 
 // Shallow copy: means that only the first level of the object is copied.
+//A shallow copy means that certain (sub-)values are still  origconnected to theinal variable
 
-// var foods = ["Pizza", "Burger", "Snacks"]; //A shallow copy means that certain (sub-)values are still connected to the original variable
+// var foods = ["Pizza", "Burger", "Snacks"];
 // var foods2 = foods; // direct refrence
 // foods[1] = "Coldrink";
 // console.log( "foods ---- " + foods);  // change
 // console.log("foods2 ---- " + foods2); // change
 
-// Deep copy: means that all levels of the object are copied. This is a true copy of the object.
-// var foods = ["Pizza", "Burger", "Snacks"];// A deep copy means that all of the values of the new variable are copied . and disconnected from the original variable
-// var foods2 = foods.slice(); // copy the values
+// var foods = ["Pizza", "Burger", "Snacks"];
+// var foods2 = foods.slice();
 // foods[1] = "Coldrink";
 // console.log( "foods ---- " + foods); // change
 // console.log("foods2 ---- " + foods2); // not change
+
+// var foods = ["Pizza", "Burger", "Snacks", ["nested"]];
+// var foods2 = foods.slice(); // direct refrence
+// foods[3][0] = "nested array";
+// console.log( "foods ---- " + foods);  // change
+// console.log("foods2 ---- " + foods2); // change // copy first level
+
+// Deep copy: means that all levels of the object are copied. This is a true copy of the object.
+// A deep copy means that all of the values of the new variable are copied . and disconnected from the original variable
+/*A deep copy of an array creates a completely independent copy of the original array and all the objects
+ or arrays inside it. Modifying the deep copy does not affect the original array or its nested data structures.
+Deep copies are not natively supported in JavaScript, so you often need to use custom functions or libraries
+like Lodash to perform deep copying. */
+
+/*Shallow copying is useful when you want to duplicate an array with a simple structure
+ (like an array of strings or numbers) and don't need deep copies of its elements. If you
+  were working with more complex objects or nested arrays, you might need to consider deep
+  copying to ensure that changes in the original do not affect the copy. */
+
 
 // syntax
 
@@ -620,14 +652,11 @@ var foods = ["Pizza", "Burger", "Snacks"];
 //const cities = ["Tokyo", "Cairo", "Los Angeles", "Paris", "Seattle"];
 
 
-//const newCityArr = cities.slice(2); // start index
-
+// const newCityArr = cities.slice(2); // start index
 // const newCityArr = cities.slice(-2);
+// const newCityArr = cities.slice(5); 
 
-// const newCityArr = cities.slice(5); //[]
-
-
-//const newCityArr = cities.slice(2,4); //(2,3);
+// const newCityArr = cities.slice(2,4); 
 
 
 //console.log(newCityArr);
@@ -639,9 +668,13 @@ var foods = ["Pizza", "Burger", "Snacks"];
 //Loop
 // for , while , do while
 // examples
-// print counting , table , find city , even or odd
+// print counting , table , found city , even or odd
 
-//var i = 1; // metthod 2 for intialization
+
+// splice(start, optional delete count, optional items to add)
+
+
+//var i = 1; // method 2 for intialization
 /*for(var i = 1 ; i <= 3; i++){
   console.log(i + ' mugs');
 
@@ -692,7 +725,7 @@ for(var i =0; i<cities.length; i++){
     found = true
     break; //1
   }
-  
+
   //else{
     //alert('no match found')
   //}
@@ -703,4 +736,71 @@ if(!found){
 }
 */
 
-////
+////////////////////////////
+
+/* var names = ['Ruhama', 'Irma', 'Yusma', 'Hira];
+
+var abilities = ['MERN STACK developer', 'devOps Engineer', 'Block chAin expert'];
+
+for (var i = 0; i < names.length; i++) {
+
+  document.write('<h1> ' + names[i] + ' </h1>' + '<br>');
+  for (var j = 0; j < abilities.length; j++) {
+
+    document.write(abilities[j] + '<br>');
+
+
+  }
+
+}
+*/
+
+////_ first and last name
+
+/*var fName = ['Ruhama', 'Shah' , 'Haider', 'Yusma'];
+
+var lName = ['Gull' , 'Fahad', 'Ali', 'Shah'];
+
+var fullName = [];
+
+var i , j;
+for(i=0; i<fName.length; i++){
+  for(j=0; j<lName.length; j++){
+    // document.write(fName[i] + ' ' + lName[j] + '<br>'); // book example
+    
+    if(i  == j){
+      document.write(fName[i] + ' ' + lName[j] + '<br>');
+      
+      fullName.push(fName[i] + ' ' + lName[j])
+    }
+  }
+}
+
+document.write('<br>' + fullName);  */
+
+
+// access nested array
+
+/*
+var arr =[['a', 'b', 'c'],[1,2,3], ['x', 'y', 'z']]
+
+for(var i=0; i<arr.length; i++){
+  for(var j=0; j<arr[i].length; j++){
+    document.write(arr[i][j] + '<br>');
+  }
+}
+*/
+
+
+// print Counting
+
+
+/*for(var i=1; i<=100; i += 10){
+  // document.write(i + '<br>');
+  
+  for(var j=i; j< i+10;  j++){
+    document.write(j + ' ');
+  }
+  
+  document.write('<br>');
+} */
