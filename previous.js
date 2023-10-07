@@ -804,3 +804,115 @@ for(var i=0; i<arr.length; i++){
   
   document.write('<br>');
 } */
+
+
+///////////////////////////// Start Class After vacations
+
+
+// for(initialization ; condition; updation){
+
+// }
+
+
+
+// var i = 1; // method 2 for intialization
+// for(var i = 1; i <= 3; i++){
+
+//   console.log(i + ' mugs');  // 1 mugs // 2 mugs  // 3 mugs
+
+// }
+
+// console.log('drum is full')
+
+
+
+// while loop
+
+// initialization is not the part of while loop
+
+// var i =1;
+// while(i<= 3){
+//   console.log(i + ' mugs');
+//   i++;
+
+// }
+
+
+// do while
+
+// // initialization is also not the part of do  while loop
+
+// var i = 1;
+// do{
+//   console.log(i + ' mugs');
+//   i++;
+// }
+// while(i<= 3) 
+
+
+// examples
+
+// check city
+
+/*var cities = ['karachi','peshawar','quetta', 'lahore'];
+
+var cleanOne  = prompt('enter city');
+
+//2
+
+// A flag is a logical concept, in js.
+
+var found=false;
+for(var i =0; i<cities.length; i++){
+  if(cleanOne === cities[i]){
+    alert('found');
+    found = true
+    break; //1
+  }
+
+  //else{
+    //alert('no match found')
+  //}
+}
+
+if(!found){
+  alert('no match found')
+}
+*/
+
+///////////////////////////////
+/*The continue statement breaks one iteration (in the loop) if a specified condition occurs, 
+and continues with the next iteration in the loop. The difference between continue and the break statement, 
+is instead of "jumping out" of a loop, the continue statement "jumps over" one iteration in the loop. */
+
+
+var arr = [];
+for (var i = 1; i < 6; i++) {
+  if (i === 3) {
+
+    continue;
+  }
+  arr.push(i);
+}
+
+console.log(arr)
+
+
+////////////////////////////
+
+var names = ['Ruhama', 'Irma', 'Yusma', 'Hira'];
+var skills = ['MERN STACK developer', 'devOps Engineer', 'Block chAin expert'];
+
+
+for (var i = 0; i < names.length; i++) {
+
+  document.write('<h1> ' + names[i] + ' </h1>' + '<br>');
+  for (var j = 0; j < skills.length; j++) {
+
+    document.write(skills[j] + '<br>');
+
+
+  }
+
+}
+

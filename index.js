@@ -1,139 +1,4 @@
 
-// for(initiakization ; condition; updation){
-
-// }
-
-
-
-// var i = 1; // method 2 for intialization
-// for(i; i <= 3; i++){
-
-//   console.log(i + ' mugs');  // 1 mugs // 2 mugs  // 3 mugs
-
-// }
-
-// console.log('drum is full')
-
-
-
-// while loop
-
-// initialization is not the part of while loop
-
-// var i =1;
-// while(i<= 3){
-//   console.log(i + ' mugs');
-//   i++;
-
-// }
-
-
-// do while
-
-// // initialization is also not the part of do  while loop
-
-// var i = 5;
-// do{
-//   console.log(i + ' mugs');
-//   i++;
-// }
-// while(i<= 3) 
-
-// examples
-
-// check city
-
-
-var cities = ['Karachi', 'Peshawar', 'Quetta', 'Lahore'];
-var date = ['22 Sep', '33 Sep', '44', '55'];
-var parent = document.getElementById('parent');
-var cardHTML = ''; 
-
-for (var i = 0; i < cities.length; i++) {
-  cardHTML += `
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="Avatar" >
-      <div class="container">
-        <h4><b>${cities[i]}</b></h4>
-        <p>${date[i]}</p>
-      </div>
-    </div>
-  `;
-}
-parent.innerHTML = cardHTML;
-
-
-
-// console.log(cities[0]);
-
-
-
-
-
-
-/*var cities = ['karachi','peshawar','quetta', 'lahore'];
-
-var cleanOne  = prompt('enter city');
-
-//2
-
-// A flag is a logical concept, in js.
-
-var found=false;
-for(var i =0; i<cities.length; i++){
-  if(cleanOne === cities[i]){
-    alert('found');
-    found = true
-    break; //1
-  }
-
-  //else{
-    //alert('no match found')
-  //}
-}
-
-if(!found){
-  alert('no match found')
-}
-*/
-
-///////////////////////////////
-/*The continue statement breaks one iteration (in the loop) if a specified condition occurs, 
-and continues with the next iteration in the loop. The difference between continue and the break statement, 
-is instead of "jumping out" of a loop, the continue statement "jumps over" one iteration in the loop. */
-
-
-var arr = [];
-for (i = 1; i < 6; i++) {
-  if (i == 3) {
-
-    continue;
-  }
-  arr.push(i);
-}
-
-console.log(arr)
-
-
-
-////////////////////////////
-
-/* var names = ['Ruhama', 'Irma', 'Yusma', 'Hira];
-
-var abilities = ['MERN STACK developer', 'devOps Engineer', 'Block chAin expert'];
-
-for (var i = 0; i < names.length; i++) {
-
-  document.write('<h1> ' + names[i] + ' </h1>' + '<br>');
-  for (var j = 0; j < abilities.length; j++) {
-
-    document.write(abilities[j] + '<br>');
-
-
-  }
-
-}
-*/
 
 ////_ first and last name
 
@@ -208,12 +73,18 @@ console.log(text.slice(5))
 // find a word
 var txt = `My name is Ruhama Gull and my favourite color is black. My sister's name is Irma Malik.`
 
-for (var i = 0; i < txt.length; i++) {
-  if (txt.slice(i, i + 4) === 'Gull') {
-    txt = txt.slice(0, i) + 'Malik' + txt.slice(i + 4);
-  }
-}
-console.log(txt);
+
+
+
+
+
+
+// for (var i = 0; i < txt.length; i++) {
+//   if (txt.slice(i, i + 4) === 'Gull') {
+//     txt = txt.slice(0, i) + 'Malik' + txt.slice(i + 4);
+//   }
+// }
+// console.log(txt);
 
 /*
 -The indexOf() method returns the position of the first occurrence of a value in a string.
@@ -242,7 +113,7 @@ console.log(txt)
 /// finding a character 
 // string.charAt(index(optional))
 
-console.log(txt.charAt(0)); //M
+console.log(txt.charAt(0)); //
 console.log(txt.charAt()); // 
 console.log(txt.charAt(txt.length - 1)); //
 console.log(txt.charAt(txt.length - 2)); //
@@ -262,12 +133,7 @@ It does not change the original string.
 
 If you replace a value, only the first instance will be replaced. To replace all instances, use a regular expression with the g modifier set.*/
 
-console.log(txt.replace('Malik', 'Bano'))
-
-console.log(txt.replace(/Malik/g, 'Bano'))
-
-console.log(txt.replace(/malik/g, 'Bano'))
-console.log(txt.replace(/malik/gi, 'Bano'))
+console.log(txt.replace('Malik', 'Bano')) //
 
 
 //////////// Rounding Numbers
@@ -313,6 +179,10 @@ if(userNum === randomNum){
 }
 */
 
+
+// var str = '1.99';
+// console.log(typeof (str));
+
 // Convert String to Integers 
 // ParseInt ---- ParseFloat
 
@@ -323,13 +193,14 @@ console.log(typeof (str));
 // parseInt returns only first integer
 //Radix/base is the number system we want to convert the string into... optional ... default 10.
 
+var str = '1.99';
 str = parseInt(str);
-console.log(str + ' ' + typeof (str)); // 1
-console.log(parseInt('30 40')) //30
-console.log(parseInt('010')) //10
-console.log(parseInt('10 years')); // 10
-console.log(parseInt('years 10')); //NaN
-console.log(parseInt('1' + 1, 2)) //3
+console.log(str + ' ' + typeof (str)); // 
+console.log(parseInt('30 40')) //
+console.log(parseInt('010')) //
+console.log(parseInt('10 years')); //
+console.log(parseInt('years 10')); //
+console.log(parseInt('1' + 1, 2)) //
 
 
 
