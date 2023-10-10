@@ -1,6 +1,22 @@
 
 
 ////_ first and last name
+// var fName = ['Ruhama', 'Shah' , 'Haider', 'Yusma'];
+// var lName = ['Gull' , 'Fahad', 'Ali', 'Shah'];
+// var fullName = [];
+
+// for(var i=0; i<fName.length; i++){
+//   // document.write(fName[i] + '</br>');
+//  for(var j=0; j<lName.length; j++){
+//   // document.write(lName[j] + '</br>');
+//   if(i===j){
+// fullName.push(fName[i]+ ' ' + lName[j])
+//     document.write(fName[i] + lName[j] + '</br>');
+//   }
+//  }
+// }
+// document.write(fullName)
+
 
 /*var fName = ['Ruhama', 'Shah' , 'Haider', 'Yusma'];
 
@@ -71,13 +87,7 @@ console.log(text.slice(5))
 
 
 // find a word
-var txt = `My name is Ruhama Gull and my favourite color is black. My sister's name is Irma Malik.`
-
-
-
-
-
-
+// var txt = `My name is Ruhama Gull and my favourite color is black. My sister's name is Irma Malik.`
 
 // for (var i = 0; i < txt.length; i++) {
 //   if (txt.slice(i, i + 4) === 'Gull') {
@@ -95,10 +105,10 @@ var txt = `My name is Ruhama Gull and my favourite color is black. My sister's n
  string.indexOf(searchvalue, start)
 */
 
-console.log(txt.indexOf('Malik'));
-console.log(txt.lastIndexOf('Malik'));
+console.log(txt.indexOf('Malik')); //
+console.log(txt.lastIndexOf('Malik')); //
 
-
+var txt = `My name is Ruhama Malik and my favourite color is black. My sister's name is Irma Malik.`
 // doing same work by using methOd 
 var firstChar = txt.indexOf("Irma");
 
@@ -245,13 +255,27 @@ var convertToStri = undefined + ' ';
 console.log(typeof (convertToStri));
 console.log(convertToStri.slice(2)) // 
 
+
+
 //////////  Date
 
-var date = new Date();
+// new Date(year, month, day, hours, minutes, seconds, milliseconds);
+var currentDtate = new Date();
 
-// document.write(date); // date Object shows the date as string but can't use string methods on it like charAt, slice etc
+// document.write(currenrDate); // date Object shows the date as string but can't use string methods on it like charAt, slice etc
 
-date = date.toString(); //Now we can treat it as a string and extract part of it by slice etc.
+currentDtate = currentDtate.toString(); //Now we can treat it as a string and extract part of it by slice etc.
+
+//The getDay() method returns the day of the week (0 to 6) of a date.
+// var day = currenrDate.getDay(); // 
+var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var day = currentDtate.getDay();
+var today = dayNames[day];
+console.log(today); //
 
 
-
+var currentDate = new Date();
+var dateString = currentDate.toString();
+var theDay = currentDate.getDay();
+var dateString = currentDate.toLocaleDateString();
+console.log(dateString);
