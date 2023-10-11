@@ -916,3 +916,154 @@ for (var i = 0; i < names.length; i++) {
 
 }
 
+
+////_ first and last name
+// var fName = ['Ruhama', 'Shah' , 'Haider', 'Yusma'];
+// var lName = ['Gull' , 'Fahad', 'Ali', 'Shah'];
+// var fullName = [];
+
+// for(var i=0; i<fName.length; i++){
+//   // document.write(fName[i] + '</br>');
+//  for(var j=0; j<lName.length; j++){
+//   // document.write(lName[j] + '</br>');
+//   if(i===j){
+// fullName.push(fName[i]+ ' ' + lName[j])
+//     document.write(fName[i] + lName[j] + '</br>');
+//   }
+//  }
+// }
+// document.write(fullName)
+
+
+/*var fName = ['Ruhama', 'Shah' , 'Haider', 'Yusma'];
+
+var lName = ['Gull' , 'Fahad', 'Ali', 'Shah'];
+
+var fullName = [];
+
+var i , j;
+for(i=0; i<fName.length; i++){
+  for(j=0; j<lName.length; j++){
+    // document.write(fName[i] + ' ' + lName[j] + '<br>'); // book example
+    
+    if(i  == j){
+      document.write(fName[i] + ' ' + lName[j] + '<br>');
+      
+      fullName.push(fName[i] + ' ' + lName[j])
+    }
+  }
+}
+
+document.write('<br>' + fullName);  */
+
+
+// access nested array
+
+/*
+var arr =[['a', 'b', 'c'],[1,2,3], ['x', 'y', 'z']]
+
+for(var i=0; i<arr.length; i++){
+  for(var j=0; j<arr[i].length; j++){
+    document.write(arr[i][j] + '<br>');
+  }
+}
+*/
+
+
+// print Counting
+
+
+/*for(var i=1; i<=100; i += 10){
+  // document.write(i + '<br>');
+  
+  for(var j=i; j< i+10;  j++){
+    document.write(j + ' ');
+  }
+  
+  document.write('<br>');
+} */
+
+
+
+/////// strings 
+
+var text = 'I am learning Js';
+
+
+
+console.log(text.toUpperCase());
+console.log(text.toLowerCase());
+console.log(text);
+
+/*The toUpperCase() method converts a string to uppercase letters.It does not change the original string.*/
+
+console.log(text.length + ' length')
+
+console.log(text.slice(5, 13)) // used to extract a part of a string 
+console.log(text.slice(5)) // end tak exrract kar lega
+
+
+// find a word
+var txt = `My name is Ruhama Gull and my favourite color is black. My sister's name is Irma Malik.`
+
+for (var i = 0; i < txt.length; i++) {
+  if (txt.slice(i, i + 4) === 'Gull') {
+    txt = txt.slice(0, i) + 'Malik' + txt.slice(i + 4);
+  }
+}
+console.log(txt);
+
+/*
+-The indexOf() method returns the position of the first occurrence of a value in a string.
+-The indexOf() method returns -1 if the value is not found.
+
+-The indexOf() method is case sensitive.
+
+ string.indexOf(searchvalue, start)
+*/
+
+console.log(txt.indexOf('Malik')); //18
+console.log(txt.lastIndexOf('Malik')); //81
+
+
+// doing same work by using methOd 
+var firstChar = txt.indexOf("Irma");
+
+if (firstChar !== -1) {
+  txt = txt.slice(0, firstChar) + "Narmeen" + txt.slice(firstChar + 4);
+}
+
+console.log(txt)
+
+
+
+/// finding a character 
+// string.charAt(index(optional))
+
+console.log(txt.charAt(0)); //M
+console.log(txt.charAt()); //M because default index is 0
+console.log(txt.charAt(txt.length - 1)); // .
+console.log(txt.charAt(txt.length - 2)); // k
+
+
+// Replacing characters 
+
+// string.replace(searchValue, newValue);
+
+/*
+
+The replace() method searches a string for a value or a regular expression.
+
+It returns a new string with the value(s) replaced.
+
+It does not change the original string.
+
+If you replace a value, only the first instance will be replaced. To replace all instances, use a regular expression with the g modifier set.*/
+
+console.log(txt.replace('Malik', 'Bano')) // only first instance will replace 
+
+console.log(txt.replace(/Malik/g, 'Bano')) // change all matches
+
+console.log(txt.replace(/malik/g, 'Bano')) // not change beacause js is case sensitive 
+console.log(txt.replace(/malik/gi, 'Bano')) // now it changes all matches
+
