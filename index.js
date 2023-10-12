@@ -1,130 +1,72 @@
-//////////// Rounding Numbers
-
-//The Math.round() method rounds a number to the nearest integer.
-console.log(Math.round('2.6')) //
-console.log(Math.round(2.5)) //
-console.log(Math.round(2.4)) //
-console.log(Math.round(-2.6)) // 
-
-console.log(Math.ceil(1.9)) //
-console.log(Math.ceil(1.5)) //
-console.log(Math.ceil(1.1)) // 
-
-console.log(Math.floor(1.9)) //
-console.log(Math.floor(1.1)) //
-console.log(Math.floor(1.5)) //
-
-
-///////////_ Random Numbers
-
-
-//The Math.random() method returns a random number from 0 (inclusive) up to but not including 1 (exclusive).
-
-console.log(Math.random()); // generate random number in decimal 
-console.log(Math.random() * 10);
-console.log(Math.floor(Math.random() * 10));
-console.log(Math.floor(Math.random() * 100));
 
 
 
+//////////  Date
 
-// guess Game
-// var userNum = +prompt('Enter the Number');
-// var randomNum = Math.floor(Math.random() * 5) ;
+// new Date(year, month, day, hours, minutes, seconds, milliseconds);
+var currentDate = new Date();
 
-// if(userNum === randomNum){
-//   alert('Congratulations!');
-// }else if(userNum === randomNum+1 || userNum === randomNum-1){
-//   alert('sooOoo close ' + randomNum);
-// }else{
-//   alert('Bhago yaha sE ' + randomNum)
-// }
+// document.write(currentDate); // date Object shows the date as string but can't use string methods on it like charAt, slice etc
 
+// currentDate = currentDate.toString(); //Now we can treat it as a string and extract part of it by slice etc.
 
+/*You can retrieve various components of a Date object, such as the year, month, day, hour, minute, second, and milliseconds. */
+var year = currentDate.getFullYear();
+var month = currentDate.getMonth(); // 0-based (0 = January, 1 = February, ...)
+var date = currentDate.getDate();
+var hour = currentDate.getHours();
+var minute = currentDate.getMinutes();
+var second = currentDate.getSeconds();
+var millisecond = currentDate.getMilliseconds(); 
+var time = currentDate.getTime();  //milliseconds since midnight, Jan. 1, 1970.
+var day = currentDate.getDay();
+// document.write(
+//   'year ' + year + '</br>' +
+//   'month ' + month + '</br>' +
+//   'date ' + date + '</br>' +
+//   'hour ' + hour + '</br>' +
+//   'minutes ' + minute + '</br>' +
+//   'second ' + second + '</br>' +
+//   'millisecond ' + millisecond + '</br>'+
+//   'day ' + day + '</br>'+
+//   'time ' + time + '</br>'
 
+// )
 
-
-
-
-
-// var userNum = +prompt('Enter the Number');
-// var randomNum = Math.floor(Math.random() * 10);
-
-// if(userNum === randomNum){
-//   alert('you Win!');
-// }else if(randomNum === userNum+1 || randomNum === userNum-1){
-//   alert('You were close ' + randomNum );
-// }else{
-//     alert('The correct number is ' + randomNum );
-
-// }
-
-
-// Toss  ?
-
-// var str = '1.99';
-// console.log(typeof (str));
-
-// Convert String to Integers 
-// ParseInt ---- ParseFloat
-
-// var str = '1.99';
-// document.write(typeof(str));
-
-//syntax ---  parseInt(string, radix);
-// parseInt returns only first integer
-//Radix/base is the number system we want to convert the string into... optional ... default 10.
-
-var str = '1.99';
-str = parseInt(str);
-// document.write(str + ' ' + typeof (str)); // 
-console.log(parseInt('30 40')) //
-console.log(parseInt('010')) //
-console.log(parseInt('10 years')); //
-console.log(parseInt('years 10')); //
-console.log(parseInt('1' + 1 , 2)) //
+//The getDay() method returns the day of the week (0 to 6) of a date.
+// var day = currenrDate.getDay(); // 
+var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var day = currentDate.getDay();
+var today = dayNames[day];
+// document.write(today); //
 
 
-
-var str2 = '1.99 sbhsbhsb';
-console.log(typeof (str2)); // string 
-str2 = parseFloat(str2);
-document.write(str2 + ' ' + typeof (str2)); //
-console.log(parseFloat('45 50')); //  45
-console.log(parseFloat('1.1')); // 1.1
-
+const dateString = currentDate.toDateString(); // "Tue May 17 2023"
+const timeString = currentDate.toTimeString(); // "10:30:00 GMT+0000 (Coordinated Universal Time)"
+const localizedDate = currentDate.toLocaleDateString(); // Depends on user's locale
+// document.write(dateString + '</br>');
+// document.write(timeString + '</br>');
+// document.write(localizedDate + '</br>');
 
 
-/*The Number() method converts a value to a number.
-If the value cannot be converted, NaN is returned
-if empty return 0
-*/
-
-var str3 = '3.1';
-str3 = Number(str3); // 3.1
-console.log(typeof (str3)); // number 
-console.log(str3); //  3.1
-console.log(Number()); //  0
+//Setting Date Components:
+currentDate.setFullYear(2024);
+currentDate.setMonth(6); // 0-based (6 = July)
+currentDate.setDate(22);
+// document.write(currentDate)
 
 
-// other data types  to string
-
-var numb = 10;
-console.log(numb + 1); //   11 
-
-numb = numb.toString();
-console.log(numb + 1); //  101
-
-numb = true;
-numb = numb.toString();
-console.log(numb.slice(3, 4)); // e
+//Arithmetic Operations
+const date1 = new Date("2023-05-17");
+const date2 = new Date("2023-06-01");
+const timeDifference = date2 - date1; // Difference in milliseconds
+// document.write(timeDifference)
 
 
-// var convertToStr = undefined.toString();
-// console.log (typeof(convertToStr)); // 
+// FUNCTIONS
 
-var convertToStri = undefined + ' ';
-console.log(typeof (convertToStri));
-console.log(convertToStri.slice(2)) //  defined 
-
+/*In JavaScript, a function is a reusable block of code that performs a specific task or set 
+of tasks. Functions are a fundamental concept in programming, and they enable you to write
+ organized, modular, and efficient code. The life of function parameters in JavaScript begins
+  when a function is called, and it ends when the function has finished executing.   */
 
