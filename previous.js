@@ -1197,3 +1197,7 @@ console.log(numb.slice(3, 4)); // e
 var convertToStri = undefined + ' ';
 console.log(typeof (convertToStri));
 console.log(convertToStri.slice(2)) //  defined 
+
+
+var random = Math.random();
+console.log(random);
