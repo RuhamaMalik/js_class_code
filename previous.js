@@ -1202,6 +1202,14 @@ console.log(convertToStri.slice(2)) //  defined
 var random = Math.random();
 console.log(random);
 
+
+// var fixedDecimalLength = 3.9999999999999991;
+// console.log(fixedDecimalLength.toFixed(2)); //4.00
+
+var fixedDecimalLength = 3.365478;
+console.log(fixedDecimalLength.toFixed(2)); //3.37
+ 
+
 // Current date and time
 
 var currentDate = new Date();

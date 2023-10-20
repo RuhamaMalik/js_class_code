@@ -126,3 +126,10 @@ console.log(numb.slice(3, 4)); // e
 var convertToStri = undefined + ' ';
 console.log(typeof (convertToStri));
 console.log(convertToStri.slice(2)) //  defined 
+
+// var fixedDecimalLength = 3.9999999999999991;
+// console.log(fixedDecimalLength.toFixed(2)); //4.00
+
+var fixedDecimalLength = 3.365478;
+console.log(fixedDecimalLength.toFixed(2)); //3.37
+ 
