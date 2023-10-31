@@ -4,10 +4,9 @@
   max-height: auto;
   display: grid;
   justify-content: center;
-  gap : 2em ;
+  gap: 2em;
   grid-template-columns: repeat(3, 300px);
 }
-
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -24,6 +23,90 @@
 }
 
 img {
+  /* width: 100%; */
+  width: 400px;
+  height: 250px;
+}
+.btn-img{
+  width: 350px;
+  height: 80px;
+}
+.input{
+  width: 300px;
+  padding: 5px;
+margin-bottom: 15px;
+}
+
+#less-btn{
+  display: none;
+}
+.hidden {
+  display: none;
+}
+
+.normal {
+  background: #000;
+  color: aliceblue;
+  padding: 1em 2em;
+  border: none;
+  outline: none;
+}
+
+.big {
+  background-color: rgb(83, 12, 150);
+  padding: 1.2em 2.4em;
+  border: none;
+  outline: none;
+  color: aliceblue;
+}
+
+/* Slider */
+
+.slider {
+  width: 80%;
+  height: 380px;
+  background: #000;
+  position: relative;
+  margin: auto;
+}
+
+.slider img {
   width: 100%;
-  height: 300px;
+  height: 100%;
+}
+
+.rightArrow,
+.lefttArrow {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  color: white;
+  font-weight: bolder;
+  background: #000000ac;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lefttArrow {
+  left: 2%;
+  justify-content: flex-end;
+}
+
+.rightArrow:hover {
+  justify-content: flex-end;
+}
+.lefttArrow:hover {
+  justify-content: flex-start;
+}
+
+
+@media (max-width : 500px){
+  .slider{
+    width: 98%;
+    height: 250px;
+  }
 }
