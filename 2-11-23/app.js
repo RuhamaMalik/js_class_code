@@ -1,27 +1,27 @@
 ////////////////////Setting field values
 
-// function fillCity() {
-//   var cityName;
-//   var zipCode= document.getElementById("zip").value;
-//   switch (zipCode) {
-//     case "1111":
-//       cityName = "Karachi";
-//       break;
-//     case "2222":
-//       cityName = "Peshawar";
-//       break;
-//     case "3333":
-//       cityName = "Islamabad";
-//       default:
-//       alert('Invalid zip');
-//   }
-//   if(cityName === undefined){
-//     document.getElementById("city").value = '';
-//   }else{
-//     document.getElementById("city").value = cityName;
-//   }
-
-// }
+function fillCity() {
+  var cityName;
+  var zipCode = document.getElementById("zip").value;
+  switch (zipCode) {
+    case "1111":
+      cityName = "Karachi";
+      break;
+    case "2222":
+      cityName = "Peshawar";
+      break;
+    case "3333":
+      cityName = "Islamabad";
+      break;
+    default:
+      alert("Invalid zip");
+  }
+  if (cityName === undefined) {
+    document.getElementById("city").value = "";
+  } else {
+    document.getElementById("city").value = cityName;
+  }
+}
 
 /////////////////// Reading and setting paragraph text
 
@@ -44,9 +44,9 @@
 
 /////////////// Manipulating images and text
 
-// function makeInvisible() {
-//   document.getElementById("ugly").className = "hidden";
-// }
+function makeInvisible() {
+  document.getElementById("ugly").className = "hidden";
+}
 
 // function addClass() {
 //   document.getElementById("p1").className += " newClass";
@@ -59,3 +59,15 @@ function makeNormal() {
   document.getElementById("btn").className = " normal";
 }
 
+//////////////////    <!-- Target all elements by tag name -->
+
+// var onlyOnePara = document.getElementById('myPara');
+var allPara = document.getElementsByTagName("p");
+
+// allPara.style.color = "red"
+// allPara[0].style.color = "red"
+// allPara[1].style.color = "red"
+
+for (var i = 0; i < allPara.length; i++) {
+  // allPara[i].style.color = "blue";
+}

@@ -7,7 +7,7 @@ var images = [
 
 var index = 0;
 var sliderImg = document.getElementById("img");
-// console.log(sliderImg);
+console.log(sliderImg);
 
 function slideRight() {
   // index += 1;
@@ -33,6 +33,7 @@ function slideLeft() {
   //   console.log("Left Arrow " + index);
   //   sliderImg.src = images[index];
   // }
+  // 
   if (index === 0) {
     index = images.length - 1;
     sliderImg.src = images[index];
