@@ -27,22 +27,21 @@ img {
   width: 400px;
   height: 250px;
 }
-.btn-img{
+.btn-img {
   width: 350px;
   height: 80px;
 }
-.input{
+.input {
   width: 300px;
   padding: 5px;
-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-#less-btn{
+#less-btn {
   display: none;
 }
 .hidden {
   display: none;
-
 }
 
 .normal {
@@ -113,3 +112,10 @@ margin-bottom: 15px;
     height: 250px;
   }
 } */
+
+#container {
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  display: none;
+}

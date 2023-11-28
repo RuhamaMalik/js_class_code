@@ -7,7 +7,7 @@
 
 // var div = document.getElementById('third');
 // div.innerHTML = "Hello";
-var html = document.childNodes[1];
+// var html = document.childNodes[1];
 // console.log(html.childNodes);
 // console.log(html.children);
 // console.log(div);
@@ -56,13 +56,84 @@ If the node is a comment node, the nodeType property will return 8.
 // console.log(target.firstChild);
 // console.log(target.lastChild);
 
-var child = document.getElementById('child');
-var heading2 = document.getElementById('head');
-
+// var child = document.getElementById('child');
+// var heading2 = document.getElementById('head');
 
 // console.log(child.parentNode);
 // console.log(child.nextSibling);
 // console.log(child.previousSibling);
 
 // console.log(heading2.nodeName);
-console.log(document.getElementsByTagName("p")[0].childNodes[0].nodeValue);
+// console.log(document.getElementsByTagName("p")[0].childNodes[0].nodeValue);
+
+// var h1 = document.getElementById('head');
+
+// console.log(h1.hasAttribute('class'));
+// console.log(h1.getAttribute('id'));
+// console.log(h1.setAttribute('class', 'h1'));
+// console.log(h1.attributes[0].nodeValue);
+
+// var ol = document.getElementById('ol');
+
+// var li =document.createElement('li'); // <li> </li>
+// var text = document.createTextNode('First li');
+// li.appendChild(text);
+
+// ol.appendChild(li);
+
+//  TODO APP
+
+// add item
+var newItem = document.getElementById("newItem");
+var ul = document.getElementById("ul");
+
+function addItem() {
+  if (newItem.value === "") {
+    alert("Enter your task");
+  } else {
+    // console.log(newItem.value);
+    var li = document.createElement("li"); // new item
+    var newTask = document.createTextNode(newItem.value);
+    li.appendChild(newTask);
+
+    var editBtn = document.createElement("button"); // edit button
+    var editBtnText = document.createTextNode("Edit");
+    editBtn.appendChild(editBtnText);
+    editBtn.setAttribute("onclick", "aditTodo(this)");
+    li.appendChild(editBtn);
+
+    var deleteBtn = document.createElement("button"); // delete button
+    var deleteBtnText = document.createTextNode("Delete");
+    deleteBtn.appendChild(deleteBtnText);
+    deleteBtn.setAttribute("onclick", "deleteTodo(this)");
+    li.appendChild(deleteBtn);
+
+    ul.appendChild(li);
+  }
+
+  newItem.value = "";
+}
+
+//  delete all
+
+function deleteAll() {
+  ul.innerHTML = "";
+}
+
+// adit Todo
+
+function aditTodo(y) {
+  //  console.log( y.parentNode.firstChild.nodeValue);
+  var oldVal = y.parentNode.firstChild.nodeValue;
+  var newTodo = prompt("Edit todo", oldVal);
+  y.parentNode.firstChild.nodeValue = newTodo;
+}
+
+//  delete todo
+
+function deleteTodo(x) {
+  // console.log(x);
+  // console.log(x.parentNode);
+
+  x.parentNode.remove();
+}

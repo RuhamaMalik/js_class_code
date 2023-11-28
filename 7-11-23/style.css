@@ -1,0 +1,34 @@
+.h1 {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3.5em;
+  text-shadow: 4px 4px 10px grey;
+  letter-spacing: 2px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container input {
+  padding: 1em;
+  width: 300px;
+  border: none;
+  outline: none;
+  color: blueviolet;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.container button {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  outline: none;
+  width: 80px;
+  margin: 0 4px;
+}
+
+.container button:hover {
+  box-shadow: 4px 4px 10px blueviolet;
+}

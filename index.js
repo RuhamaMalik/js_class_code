@@ -42,3 +42,48 @@ function slideLeft() {
     sliderImg.src = images[index];
   }
 }
+
+
+/*  pattern 1
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+*/
+var star= ' * '
+
+// for(var i=0 ; i< 5 ; i++){ 
+//   document.write(star + ' </br>');
+//   for(j=0 ;j<i; j++){
+//     document.write(star );
+
+//      }
+
+// }
+
+for (var i = 1; i <=5; i++) {
+  var star = "";
+  for (var j = 1; j <= i; j++) {
+      star = star + "* "; // * * * * *
+  }
+  console.log(star);
+}
+
+
+
+
+/*var star = '* ';
+
+
+for (var i = 1; i <= 5; i++) {
+  // document.write(i + '<br>');
+
+  for (var j = 0; j < i ; j++) {
+    document.write( star + ' ');
+  }
+
+  document.write('<br>');
+} */
