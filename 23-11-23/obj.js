@@ -104,7 +104,7 @@ function visible(){
     isVisible = true
     }else{
       
-    div.style.display = 'none'
+    div.style.display = 'none';
     isVisible = false;
     
     }
@@ -116,6 +116,7 @@ function visible(){
 // console.log(user2);
 
 // console.log( 'hobbies' in user2);
+
 
 
 
