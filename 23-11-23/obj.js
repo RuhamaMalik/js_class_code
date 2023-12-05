@@ -88,31 +88,15 @@
 // user2.class = 1;//add prop
 
 // var users = [user1, user2];
-// console.log(user2); 
+// console.log(user2);
 
 // user2.myAge = 20; // override
-// console.log(user2); 
+// console.log(user2);
 
-var btn = document.getElementById('btn');
-var div = document.getElementById('container');
 
-var isVisible = false;
-
-function visible(){
-  if(!isVisible){
-    div.style.display = 'block'
-    isVisible = true
-    }else{
-      
-    div.style.display = 'none';
-    isVisible = false;
-    
-    }
-    
-}
 // IN DELETE
 
-// delete user2.myAge;
+// delete user2.hobbies;
 // console.log(user2);
 
 // console.log( 'hobbies' in user2);
@@ -123,6 +107,88 @@ function visible(){
 
 
 
+
+
+
+//  METHODS
+//  In JavaScript, a method in the context of objects refers to a function that is a
+//  property of an object. Methods are functions that are associated with an object and
+//  are typically used to perform actions related to that object or to compute something
+//  based on the object's properties.
+
+// var user2 = {
+//   'name': "hira",
+//   myAge: 10,
+//   hobbies: ["gardening", "coding", "riding"],
+//   greet : function (){
+//     console.log('hello, my name is ' + this.name );
+//   }
+// };
+
+
+// console.log(user2.greet());
+
+
+
+
+//CONSTRUCTOR
+
+// There are two methods by which you can create an object: an object literal and
+//  the object constructor.  Object literals work well if you want to create a single object.
+// But if you want to create more than one object, it is always better to use the
+//  object constructor. This allows you to avoid unnecessary repetition in your code
+//  and also makes it easier to change the properties of your object.
+
+// Basically, constructors are functions whose names are usually capitalized.
+// The capitalization of a constructor name does not have any effect on the object.
+// It is only a means of identification.
+
+// function ObjectConstructor (stName, stAge, stClass, stsection){
+//   this.name = stName ,
+//   this.age = stAge ,
+//   this.stClass = stClass,
+//   this.section = stsection
+
+// }
+// You can use a constructor to create a new object by calling the constructor with the
+//  new keyword. The new keyword will create an instance of an object and bind the
+//  this keyword to the new object.
+
+// var stu1 = new ObjectConstructor('Ruhama', 10, 1 , 'A' );
+// var stu2 = new ObjectConstructor('Hira', 20, 2 , 'B' );
+
+
+//PROTOTYPES
+
+// Every object in JavaScript has a built-in property, which is called its prototype.
+// The prototype is itself an object, so the prototype will have its own prototype,
+//  making what's called a prototype chain. The chain ends when we reach a prototype
+//   that has null for its own prototype.
+// The JavaScript prototype property allows you to add new properties to object constructors
+// The JavaScript prototype property also allows you to add new methods to objects constructors.
+function ObjectConstructor (stName, stAge, stClass, stsection){
+  this.name = stName ,
+  this.age = stAge ,
+  this.stClass = stClass,
+  this.section = stsection
+
+}
+
+ObjectConstructor.prototype.pop = function (){
+  return 'Hello ' + this.name
+}
+
+var stu1 = new ObjectConstructor('Anousha', 10, 1, 'A');
+var stu2 = new ObjectConstructor('Hira', 10, 1, 'A');
+// var stu3 = new ObjectConstructor('Farheen', 10, 1, 'A');
+
+console.log(stu2.pop());
+console.log(stu2);
+// console.log(stu3);
+
+//  HASOWNPROPERTY FOR IN LOOP3
+// console.log(stu2.hasOwnProperty('stClass') );
+// console.log('pop' in   stu2);
 
 
 
