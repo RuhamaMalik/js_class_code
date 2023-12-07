@@ -190,5 +190,52 @@ console.log(stu2);
 // console.log(stu2.hasOwnProperty('stClass') );
 // console.log('pop' in   stu2);
 
+// var obj = {
+//   name : 'ruhama',
+//   age :10,
+//   isActivate : true
+// }
+// for (var prop in obj) {
+// //  console.log(prop); // return property name
+//  console.log(obj[prop]); //return property value
+
+// }
+
+
+///////////////////////////////////////
+
+// // window.location.href returns the href (URL) of the current page
+// console.log(window.location.href);
+// You can use document.URL as an alternative to window.location.href
+// window.location.hostname returns the domain name of the web host
+// console.log( document.URL);
+// window.location.pathname returns the path / filename of the current page
+// console.log(window.location.pathname);
+// window.location.hash property sets or returns the anchor part of a URL, including the hash sign (#).
+// console.log(window.location.hash);
+// window.location.assign() Navigates to the given URL..
+// window.location.replace() Removes the current page from the session history and navigates to the given URL..
+// window.location.reload() method reloads the current document.
+// history.forward() method loads the next URL (page) in the history list.
+//  history.back() method loads the previous URL (page) in the history list.
+// history.back() method only works if a previous page exists.
+// The history.go() method loads a URL (page) from the history list.
+// document.referrer property returns the URL of the document that loaded the current document.
+// The referrer property is read-only.
+// The window.open() method opens a new browser window, or a new tab, depending on your browser settings and the parameter values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
