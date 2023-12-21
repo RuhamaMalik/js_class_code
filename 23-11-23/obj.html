@@ -4,23 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Objects!</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    
     <h1>Learning Objects</h1>
 
     <button
-    onclick="window.open('https:\\facebook.com', '' , 'width=400,height=400')"
-  >
-    open new window
-  </button>
-  <button onclick="window.close('https:\\facebook.com')">
-    facebook
-  </button>
+      onclick="window.open('https:\\facebook.com', '' , 'width=400,height=400')"
+    >
+      open new window
+    </button>
+    <button onclick="window.close('https:\\facebook.com')">facebook</button>
+
+    <!-- <form id="myForm">-->
+    <form onSubmit="return checkForSelection('states');"> 
+    
+      <select id="states">
+        <option value="" selected>SELECT A STATE</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option></select
+      >&nbsp;&nbsp;
+      <input type="submit" value="Submit Form" />
+    </form> <br> <br><br>
 
 
-   
+    <form onSubmit="return checkForSelection('cities');"> 
+    
+      <select id="cities">
+        <option value="" selected>SELECT A STATE</option>
+        <option value="al">Alabama</option>
+        <option value="aa">Alaska</option>
+        <option value="az">Arizona</option>
+        <option value="ar">Arkansas</option></select
+      >&nbsp;&nbsp;
+      <input type="submit" value="Submit Form" />
+    </form>
+
+
+    <form onSubmit="return validateRadios();">
+      <input type="radio" name="r1" value="cat"> Cat<br>
+      <input type="radio" name="r1" value="bat"> Bat<br>
+      <input type="radio" name="r1" value="hat"> Hat<br>
+      <input type="submit" value="Submit Form">
+      </form>
+
+      
     <script src="obj.js"></script>
   </body>
 </html>

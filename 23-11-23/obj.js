@@ -130,7 +130,6 @@
 
 
 
-
 //CONSTRUCTOR
 
 // There are two methods by which you can create an object: an object literal and
@@ -166,15 +165,15 @@
 //   that has null for its own prototype.
 // The JavaScript prototype property allows you to add new properties to object constructors
 // The JavaScript prototype property also allows you to add new methods to objects constructors.
-function ObjectConstructor (stName, stAge, stClass, stsection){
-  this.name = stName ,
-  this.age = stAge ,
-  this.stClass = stClass,
-  this.section = stsection
+function ObjectConstructor(stName, stAge, stClass, stsection) {
+  this.name = stName,
+    this.age = stAge,
+    this.stClass = stClass,
+    this.section = stsection
 
 }
 
-ObjectConstructor.prototype.pop = function (){
+ObjectConstructor.prototype.pop = function () {
   return 'Hello ' + this.name
 }
 
@@ -182,8 +181,8 @@ var stu1 = new ObjectConstructor('Anousha', 10, 1, 'A');
 var stu2 = new ObjectConstructor('Hira', 10, 1, 'A');
 // var stu3 = new ObjectConstructor('Farheen', 10, 1, 'A');
 
-console.log(stu2.pop());
-console.log(stu2);
+// console.log(stu2.pop());
+// console.log(stu2);
 // console.log(stu3);
 
 //  HASOWNPROPERTY FOR IN LOOP3
@@ -227,13 +226,99 @@ console.log(stu2);
 
 
 
+// document.getElementById('myForm').addEventListener('submit',function checkForSelection(e) {
+//   e.preventDefault();
+//   var selected = document.getElementById("states");
+//   if (selected.selectedIndex === 0) {
+//     alert("Please select a state.");
+//     return false;
+//   }
+
+// console.log(selected.value);
+
+// }
+//  )
+
+
+
+function checkForSelection(id) {
+
+  var selected = document.getElementById(id);
+  if (selected.selectedIndex === 0) {
+    alert("Please select a state.");
+    return false;
+  }
+
+  console.log(selected.value);
+
+}
+
+
+
+
+function validateRadios() {
+  var radios = document.getElementsByName("r1");
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      return true;
+    }
+  }
+  alert("Please check one.");
+  return false;
+}
+
+var i = 0;
+
+// do {
+//   console.log(i);
+//   i++
+// } while (i >=0);
 
 
 
 
 
+/////////////////////////////
+
+/*
+In programming, an exception is an abnormal or unexpected event that
+ occurs during the execution of a program, disrupting the normal flow of 
+ instructions. Exceptions are typically caused by errors in the program,
+  such as invalid input, division by zero, attempting to access 
+  an undefined variable, or other unexpected situations.
+
+In JavaScript, exceptions are represented as objects. When an exceptional situation arises, 
+an exception object is created, and the JavaScript interpreter looks for a nearby
+ try...catch block to handle it.
 
 
+The try...catch statement in JavaScript is used for handling exceptions (runtime errors)
+ that might occur in a block of code. It allows you to attempt a block of code,
+  and if an exception occurs, it provides a way to gracefully handle that
+   exception without crashing the entire program.
+
+   try {
+  // Code that might throw an exception
+  // ...
+} catch (error) {
+  // Code to handle the exception
+  // 'error' is the caught exception object
+  // ...
+} finally {
+  // Code that will always be executed, regardless of whether an exception occurred or not
+  // ...
+}
+*/
+
+
+try {
+  var n = alrt('hello');
+} catch (error) {
+  console.log(error);
+
+} finally {
+  console.log('mai chaluga hi bhai');
+}
 
 
 
