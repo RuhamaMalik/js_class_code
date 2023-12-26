@@ -8,7 +8,7 @@
 //         // console.log(local);
 //         var block = 'block scope';
 //         // console.log(block); // accessible
-//     }
+//     }=
 
 //     // console.log(block);
 
@@ -128,7 +128,7 @@
 
 // function recursive(n) {
 
-    // console.log(n);
+// console.log(n);
 
 //     descending.push(n);
 //     if (n > 1) {
@@ -140,3 +140,152 @@
 // console.log(descending);
 
 
+// factorial
+
+// 5*4*3*2*1
+
+// function findFactorial(n) {
+//     let factorial = 1;
+
+//     if (n === 1) {
+//         return 1;
+//     }
+//     factorial = n * findFactorial(n - 1)
+//     return factorial;
+
+// }
+
+// let result = findFactorial(5)
+// console.log(result);
+
+
+/// destructuring
+
+// let arr = [1, 2, 3, 4];
+// // const [a, b, c, d = 4] = arr;
+
+// const [a, , , b, c = 4] = arr;
+// console.log(b); //
+
+
+// let obj = {
+//     name: 'Ruhama',
+//     section: 'A',
+//     email: 'abc@gmail.com',
+//     locations: {
+//         l1: 'peshawar',
+//         l2: 'karachi'
+//     }
+// }
+
+// // const { name, section, age = 10 } = obj;
+// const { name, email, age = 10, locations: { l1, l2 } } = obj;
+
+// console.log(l1);
+
+
+/// rest and spread operators
+
+// function add(a = 1, b = 1) {
+//     console.log(a + b); //
+
+// }
+
+// add(2);
+
+
+// ...
+
+// function myFunc(a, b, ...arg) {
+//     // console.log(...arg);
+//     const [c,d] = arg
+//     console.log(c , d);
+
+// }
+
+// myFunc(1, 2, 3, 4, 5, 6, 7, 8)
+
+// const arr1 = [1, [2, 3], 4, 5];
+
+// const arr2 = [...arr1, 6, 7, 8]; //shallow copy
+
+// arr2[1][1] = 33
+// console.log('arr1', arr1);
+// console.log('arr2', arr2);
+
+// let obj = {
+//     name: 'Hira',
+//     age: 10,
+//     locations: {
+//         l1: 'Karachi',
+//         l2: 'peshawar'
+//     }
+// }
+
+// let obj2 = { ...obj , locations:{...obj.locations} }
+// obj.locations.l1 = 'islamabad';
+
+// console.log('obj', obj);
+// console.log('obj2', obj2);
+
+/// arrow function
+
+// const add = function () { // function expression
+//     console.log('function expression');
+// }
+
+// add()
+
+
+
+// function add(a, b) { // regular function 
+//     console.log('function expression');
+// }
+
+// add(1, 2)
+
+// const add2 = (a, b) => {
+//     return a + b
+// }
+
+// const add2 = a => a + 2
+
+// let result = add2(3)
+// console.log(result);
+
+
+// function subtract() { // regular function 
+//     console.log(arguments);
+// }
+
+// subtract(1, 2, 3, 4, 5)
+
+// const subtract = (...arg) => console.log(arg);
+// subtract(1,2,3,4,5)
+
+// const user = {
+//     name: 'user1',
+//     email: "user1@gmail.com",
+//     greet: () => {
+//         console.log(this.name);
+//     }
+// }
+
+// user.greet();
+
+// function Users(name, age) {
+//     this.name = name,
+//         this.age = age
+// }
+
+// const user1 = new Users('Ruhama', 10);
+// console.log(user1);
+
+
+const Users = (name, age) => {
+    this.name = name,
+        this.age = age
+}
+
+const user1 = new Users('Ruhama', 10);
+console.log(user1);
